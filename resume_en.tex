@@ -1,0 +1,210 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+%!TEX program = xelatex
+
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+\usepackage[UTF8]{ctex}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+% add by zhangjun
+\newcommand{\resumeProjectItem}[1]{
+  \item\small{
+    \textbf{#1}
+  }
+}
+
+\newcommand{\resumeItemAdd}[2]{
+  \item [#1]\small{
+    	{ #2 \vspace{-2pt}}
+  }
+}
+
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{http://github.com/zhangjun}{\Large Jun Zhang}} & Email : \href{mailto:zhangjjun@live.com}{zhangjjun@live.com}\\
+  \href{https://github.com/zhangjun}{https://github.com/zhangjun} & Mobile : +86-186-6016-7740 \\
+\end{tabular*}
+
+
+%%-----------PROFILE-----------------
+%\section{Profile}
+% Skilled in C++
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+	 {Shandong University}{Jinan, China}
+      {Master of Science in Computer Science;  GPA: 3.5}{Sep. 2013 -- June. 2016}
+    \resumeSubheading
+      {University of Electronic Science and Technology of China}{Chengdu, China}
+      {Bachelor of Science in Information Security;  GPA: 3.66 (9.15/10.0)}{Sep. 2009 -- July. 2013}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Sogou}{Beijing, China}
+      {Senior Software Engineer}{May 2018 - Present}
+      \resumeItemListStart
+	  
+	   \resumeProjectItem{Sogou OCR}
+ 		 \resumeItemListStart
+		  \resumeItemAdd {-}
+		  {Designed the OCR engines, which do the actual character identification, layout analysis. Develop many kinds of domain-specific OCR applications, such receipt OCR, invoice OCR, ads OCR, photo translation OCR.}
+		  \resumeItemAdd{-} 
+		  {Designed and developed the online prediction service using Tensorflow Serving and Apache Mxnet.}
+		  \resumeItemAdd{-} 
+		  {Optimized online predict service performace using custom GPU kernel.}
+		\resumeItemListEnd
+		
+	   \resumeProjectItem{Pornographic Image Identification}
+	    \resumeItemListStart
+		  \resumeItemAdd {-}
+		  {Build inference server with TensorRT, achieving 15x speepup compared to the original Caffe version.}
+	    \resumeItemListEnd
+		
+	  \resumeProjectItem{Video Analytics}
+	    \resumeItemListStart
+		  \resumeItemAdd {-}
+		  {Design the pipelines of video analytics for Sogou Feed using Tensorflow, Keras and DyNet.}
+		\resumeItemListEnd
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Weibo}{Beijing, China}
+      {Software Engineer}{July 2016 - Mar 2018}
+      \resumeItemListStart
+	   \resumeItem{Log Collection}
+          {Designed the Kafka-like log collection and aggregation system using C++, which collected user behavior data for Weibo Search service in real time.}
+        \resumeItem{Weibo Topic}
+          {Build real-time data processing service for the Weibo Topic project, which provided fundamental data for Weibo Topic recommentdation. Provided a thin REST layer on top for serving computed data online.}
+		%  {Involved in features such as delivery time optimization, tracking, queuing and A/B testing.}
+	  
+       \resumeItem{Data Pipeline}
+          {Designed the data pipeline for Weibo Search service. Involved in features such as collection, conversion, migration.}
+
+%        \resumeItem{Flume Logsystem}
+%          {Designed the internal survey and crowd sourcing platfowm which allowed for creating various tasks for crowd sourding or embedding surveys across the Coursera platform.}
+		  
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Baidu}{Beijing, China}
+      {R\&D Intern}{July 2015 - Nov 2015}
+      \resumeItemListStart
+ 	   \resumeItem{Test Platform}
+          {Developed automated testing platform for Baidu Knowledge Search service.}
+        \resumeItem{Pressure Tools}
+          {Developed HTTP load testing tool using Golang.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Shandong Univeristy}{Jinan, China}
+      {Research and Teaching Assistant}{Sep 2013 - June 2015}
+      \resumeItemListStart
+        \resumeItem{Research Assistant - High Performance Computing}
+          {Research on high performace computing for accelerating MapReduce framework on the heterogeneous computing platform. Developed the MapReduce framework for GPU clusters and CPU-GPU heterogeneous computing platforms.}
+        \resumeItem{Teaching Assistant - Java}
+          {Involved in creating lab assignment, exams. }
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%%-----------PROJECTS-----------------
+%\section{Projects}
+%  \resumeSubHeadingListStart
+%    \resumeSubItem{QuantSoftware Toolkit}
+%      {Open source python library for financial data analysis and machine learning for finance.}
+%  \resumeSubHeadingListEnd
+
+
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Languages}
+      {C++, Golang, Python}
+    \resumeSubItem{Technologies}
+      {Tensorflow, CUDA, TensorRT, Brpc, Kafka}
+  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
